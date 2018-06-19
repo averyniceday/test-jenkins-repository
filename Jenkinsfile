@@ -5,7 +5,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'java -jar $CMO_PIPELINES_HOME/redcap/redcap_pipeline/target/redcap_pipeline.jar -e -s mskimpact_heme -d .'
+                sh 'cd $CMO_PIPELINES/redcap'
+                sh 'mvn clean install'
             }
         }
     }
