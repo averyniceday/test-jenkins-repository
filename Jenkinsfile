@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                java '-jar redcap_pipeline.jar -e -s mskimpact -d .'
+                ls
             }
         }
     }
