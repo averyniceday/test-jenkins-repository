@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cd $CMO_PIPELINES_HOME/redcap'
+                sh 'cd $CMO_PIPELINES_HOME/redcap/redcap_pipeline/target'
                 sh 'java -jar redcap_pipeline.jar -e -s mskimpact_heme -d .'
             }
         }
