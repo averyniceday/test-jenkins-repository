@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'java:8' }
+        docker { image 'cbioportalpipelines/cmo-pipelines:test }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                java -jar redcap_pipeline.jar -e -s mskimpact -d .
             }
         }
     }
