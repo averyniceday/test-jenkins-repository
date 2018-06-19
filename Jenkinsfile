@@ -1,12 +1,12 @@
 pipeline {
-  agent {
-    docker { image 'cbioportalpipelines/cmo-pipelines:test' }
-  }
-  stages {
-    stage("Test Stage 1") {
-       steps {
-        echo 'Hello world!'
-       }
+    agent {
+        docker { image 'node:7-alpine' }
     }
-  }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
