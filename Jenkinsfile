@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'cbioportalpipelines/cmo-pipelines:test'
+    docker { image 'cbioportalpipelines/cmo-pipelines:test' }
   }
   stages {
     stage("Test Stage 1") {
