@@ -1,13 +1,13 @@
 pipeline {
     agent {
-        docker { image 'cbioportalpipelines/cmo-pipelines:test' 
+        docker { image 'averyniceday/redcap:test' 
                  args '-u root' 
                }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'cd $CMO_PIPELINES_HOME/redcap && mvn clean install && java -jar redcap_pipeline/target/redcap_pipeline.jar -e -s mskimpact_heme -d .'
+                sh 'java -jar /app/redcap_pipeline.jar -e -s mskimpact_heme -d .'
             }
         }
     }
