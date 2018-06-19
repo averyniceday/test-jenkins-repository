@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                ls
+                sh 'java -jar redcap_pipeline.jar -e -s mskimpact_heme -d .'
             }
         }
     }
