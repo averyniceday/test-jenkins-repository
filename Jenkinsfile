@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'cd $CMO_PIPELINES/redcap'
+                sh 'cd $CMO_PIPELINES_HOME/redcap'
                 sh 'mvn clean install'
             }
         }
