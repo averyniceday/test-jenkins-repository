@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'averyniceday/redcap:test' 
+        docker { image 'averyniceday/test-redcap:test' 
                  args '-u root' 
                }
     }
