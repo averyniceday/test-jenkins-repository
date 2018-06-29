@@ -12,7 +12,7 @@ pipeline {
                 sh 'java -jar /app/cmo-pipelines/redcap/redcap_pipeline/target/redcap_pipeline.jar -e -s mskimpact_heme -d /app/cbioportal-data/dmp/hemepact'
                 sh 'java -jar /app/cmo-pipelines/redcap/redcap_pipeline/target/redcap_pipeline.jar -e -s mskimpact -d /app/cbioportal-data/dmp/mskimpact'
                 sh 'ls /app/cbioportal-data/dmp/hemepact'
-                sh 'cat /app/cbioportal-data/dmp/hemepact/data_clinical_sample.txt'
+                sh 'sh test-file.sh /app/cbioportal-data/dmp/hemepact/data_clinical_sample.txt'
             }
         }
     }
